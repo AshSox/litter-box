@@ -1,0 +1,274 @@
+:root {
+    --light: rgb(248, 248, 209);
+    --contrast: rgb(230, 198, 57);
+    --dark: rgb(26, 14, 80);
+    --muted: rgb(157, 69, 69);
+    --pale: rgb(229, 181, 241);
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.banner > a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.banner > a:hover, #backbtn > a:hover {
+    color: var(--dark)
+}
+
+
+#timer {
+    display: flex;
+    align-items: baseline;
+}
+
+#timer > h3, .timer-count {
+    color: var(--contrast);
+}
+
+.timer-count {
+    margin-left: 3px;
+}
+
+
+.instructions, .submit-score, #highscorespage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions > h1 {
+    font-size: 2.1rem;
+    margin: 21px 0px;
+    margin-top: 10%;
+}
+
+.instructions p {
+    width: 90%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.start-button {
+    width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: var(--muted);
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 1rem;
+    margin-top: 40px;
+    transition: all .2s ease-in-out;
+}
+.start-button:hover {
+    transform: scale(1.1); 
+    color: var(--pale);
+}
+
+.none {
+    display: none;
+}
+
+#quiz, #finish, #congrats, #uh-oh {
+    flex-direction: column;
+    align-items: center;
+}
+
+h2#question {
+    margin: 20px 0px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--dark);
+}
+
+#buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+button.choice {
+    width: 200%;
+    margin: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--muted);
+    border: 2px ridge var(--dark);
+    color: var(--light);
+    transition: all .2s ease-in-out;
+}
+
+button.choice:hover, .btns:hover {
+    transform: scale(1.1); 
+    background-color: var(--pale);
+    color: var(--dark);
+}
+
+#wrong p {
+    color: var(--contrast);
+    font-size: 1.5rem;
+}
+
+#correct p {
+    color: var(--muted);
+    font-size: 1.5rem;
+}
+
+
+#finish h2 {
+    color: var(--contrast);
+    font-size: 2.1rem;
+    margin-top: 10px;
+}
+
+#finish p {
+    width: 90%;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--dark)
+}
+
+#finalscores {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.btns {
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--muted);
+    border: 2px ridge var(--dark);
+    color: var(--light);
+    transition: all .2s ease-in-out;
+}
+
+.submit-score label, .submit-score input {
+    margin: 10px;
+}
+
+#backbtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#backbtn > a {
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: var(--muted);
+    margin: 15px 0 0 15px;
+}
+
+
+#highscorespage > h1 {
+    font-size: 3rem;
+    margin: 21px 0px;
+    color: var(--contrast);
+}
+
+#allscores {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#allscores > li {
+    text-align: left;
+    font-size: 2.5rem;
+    margin: 15px;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+#allscores > li:nth-child(even) {
+    color: var(--muted);
+}
+
+ 
+@media screen and (min-width: 782px) {
+    .banner > a, #timer {
+        font-size: 1.2rem;
+    }
+
+    .instructions {
+        margin-top: 0%;
+    }
+
+    .instructions > h1 {
+        font-size: 2.4rem;
+    }
+    
+    .instructions p, #finish p {
+        width: 70%;
+        font-size: 1.5rem;
+    }    
+
+    .start-button {
+        font-size: 1.3rem;
+    }
+
+    #finish h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
+    #highscorespage > h1 {
+        font-size: 4rem;
+    }
+
+    #allscores > li {
+        font-size: 3.5rem;
+    }    
+}   
+
+
+@media screen and (min-width: 992px) {
+    .banner > a, #timer {
+        font-size: 1.5rem;
+    }
+
+    .instructions {
+        margin-top: 0%;
+    }
+
+    .instructions > h1 {
+        font-size: 3rem;
+        margin-top: 15px;
+    }
+    
+    .instructions p, #finish p {
+        width: 60%;
+        font-size: 1.6rem;
+        margin: 12px 0px;
+    }    
+
+    .start-button {
+        font-size: 1.7rem;
+    }
+
+    #finish h2 {
+        font-size: 3rem;
+        font-weight: bolder;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+}    
